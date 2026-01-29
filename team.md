@@ -39,7 +39,7 @@ title: Team
   <div class="w-full sm:w-64 md:w-72 lg:w-80 bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition flex flex-col">
     <img src="assets/images/MatthewDavis.jpg" alt="Matthew Davis" class="w-32 h-32 mx-auto rounded-full mb-4">
     <h3 class="text-xl font-semibold mb-1">Matthew Davis</h3>
-    <p class="text-gray-700 text-sm mb-3">Matthew...</p>
+    <p class="text-gray-700 text-sm mb-3">Matthew is a computer science student at The University of Alabama with a focus primarily in security, and database management. His exeperience comes in the form of just under a decade of of hands on work with older databases, custom scripts, and group organization. In his free time Matthew is working on his own applications for the market, and organizes group events for a variety of side projects.</p>
     <div class="flex justify-center space-x-3 mt-auto">
       <a href="mailto:" class="text-blue-600 hover:underline">Email</a>
       <a href="https://github.com/" class="text-blue-600 hover:underline" target="_blank">GitHub</a>
