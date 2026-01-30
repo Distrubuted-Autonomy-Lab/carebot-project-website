@@ -41,8 +41,8 @@ title: Team
     <h3 class="text-xl font-semibold mb-1">Matthew Davis</h3>
     <p class="text-gray-700 text-sm mb-3">Matthew is a computer science student at The University of Alabama with a focus primarily in security, and database management. His exeperience comes in the form of just under a decade of of hands on work with older databases, custom scripts, and group organization. In his free time Matthew is working on his own applications for the market, and organizes group events for a variety of side projects.</p>
     <div class="flex justify-center space-x-3 mt-auto">
-      <a href="mailto:" class="text-blue-600 hover:underline">Email</a>
-      <a href="https://github.com/" class="text-blue-600 hover:underline" target="_blank">GitHub</a>
+      <a href="mailto:dmdavis9@ua.edu" class="text-blue-600 hover:underline">Email</a>
+      <a href="https://github.com/dmdaviddavis" class="text-blue-600 hover:underline" target="_blank">GitHub</a>
     </div>
   </div>
 
