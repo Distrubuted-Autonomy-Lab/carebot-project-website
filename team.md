@@ -26,7 +26,7 @@ title: Team
 
   <!-- Team Member -->
   <div class="w-full sm:w-64 md:w-72 lg:w-80 bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition flex flex-col">
-    <img src="assets/images/SamPope.jpeg" alt="Sam Pope" class="w-32 h-32 mx-auto rounded-full mb-4">
+    <img src="assets/images/SamPope.jpg" alt="Sam Pope" class="w-32 h-32 mx-auto rounded-full mb-4">
     <h3 class="text-xl font-semibold mb-1">Sam Pope</h3>
     <p class="text-gray-700 text-sm mb-3">Sam is a computer science student at the University of Alabama. His interests are in web deveopment and artifical intelegence. He has gained experience through internships, classes, and projects. Sam is skilled in Python, C, C++, and Angular. In his free time Sam likes to read, play ultimate frisbee, and cook.</p>
     <div class="flex justify-center space-x-3 mt-auto">
