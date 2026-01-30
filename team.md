@@ -60,11 +60,11 @@ title: Team
   <!-- Team Member -->
   <div class="w-full sm:w-64 md:w-72 lg:w-80 bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition flex flex-col">
     <img src="assets/images/ChristianMeraz.jpg" alt="Christian Meraz" class="w-32 h-32 mx-auto rounded-full mb-4">
-    <h3 class="text-xl font-semibold mb-1">Christian Meraz</h3>
-    <p class="text-gray-700 text-sm mb-3">Christian...</p>
+    <h3 class="text-xl font-semibold mb-1">Christian Meraz-Santiago</h3>
+    <p class="text-gray-700 text-sm mb-3">Christian is a computer science student at the University of Alabama with a minor in robotics. He has gained experience through his various clubs and extracurricular activities. He hopes to pursue a career in datascience and is experienced in Matlab, jupyter notebooks, as well as a variety of coding languages. In his free time he likes to read, skateboard, and code.</p>
     <div class="flex justify-center space-x-3 mt-auto">
-      <a href="mailto:" class="text-blue-600 hover:underline">Email</a>
-      <a href="https://github.com/" class="text-blue-600 hover:underline" target="_blank">GitHub</a>
+      <a href="mailto:cjmerazsantiago@crimson.ua.edu" class="text-blue-600 hover:underline">Email</a>
+      <a href="https://github.com/cSantiago04" class="text-blue-600 hover:underline" target="_blank">GitHub</a>
     </div>
   </div>
 </div>
