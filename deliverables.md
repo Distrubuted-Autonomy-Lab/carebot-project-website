@@ -14,5 +14,15 @@ title: Deliverables
       <li><a href="assets/deliverables/PreliminaryPresentation.pdf" class="text-blue-600 hover:underline">Preliminary Presentation</a></li>
     </ul>
   </div>
+  
+  <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+    <h3 class="text-xl font-semibold mb-2">Sprint 1 Deliverables</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li><a href="assets/deliverables/sprint-1/Caregiver Connect Chatbot - Sprint 1.pdf" class="text-blue-600 hover:underline">Sprint 1 Presentation</a></li>
+      <li><a href="assets/deliverables/sprint-1/Sprint 1 Planning and Backlog.pdf" class="text-blue-600 hover:underline">Planning and Sprint Backlog</a></li>
+      <li><a href="assets/deliverables/sprint-1/Sprint 1 Project snapshot.png" class="text-blue-600 hover:underline">Project Backlog Snapshot</a></li>
+      <li><a href="assets/deliverables/sprint-1/Sprint 1 Retrospective.pdf" class="text-blue-600 hover:underline">Retrospective</a></li>
+    </ul>
+  </div>
 </div>
 </section>
