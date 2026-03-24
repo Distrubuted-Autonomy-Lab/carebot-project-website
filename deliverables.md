@@ -24,5 +24,14 @@ title: Deliverables
       <li><a href="assets/deliverables/sprint-1/Sprint 1 Retrospective.pdf" class="text-blue-600 hover:underline">Retrospective</a></li>
     </ul>
   </div>
+  <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+    <h3 class="text-xl font-semibold mb-2">Sprint 2 Deliverables</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li><a href="assets/deliverables/sprint-2/Sprint 2 Presentation.pdf" class="text-blue-600 hover:underline">Sprint 2 Presentation</a></li>
+      <li><a href="assets/deliverables/sprint-2/Sprint 2 Planning and Backlog.pdf" class="text-blue-600 hover:underline">Planning and Sprint Backlog</a></li>
+      <li><a href="assets/deliverables/sprint-2/Full Backlog Snapshot 2.pdf" class="text-blue-600 hover:underline">Project Backlog Snapshot</a></li>
+      <li><a href="assets/deliverables/sprint-2/Sprint 2 Retrospective.pdf" class="text-blue-600 hover:underline">Retrospective</a></li>
+    </ul>
+  </div>
 </div>
 </section>
