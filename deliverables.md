@@ -33,5 +33,26 @@ title: Deliverables
       <li><a href="assets/deliverables/sprint-2/Sprint 2 Retrospective.pdf" class="text-blue-600 hover:underline">Retrospective</a></li>
     </ul>
   </div>
+  <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+    <h3 class="text-xl font-semibold mb-2">Sprint 3 Deliverables</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li><a href="assets/deliverables/sprint-3/Sprint 3 Presentation.pdf" class="text-blue-600 hover:underline">Sprint 3 Presentation</a></li>
+      <li><a href="assets/deliverables/sprint-3/Sprint 3 Planning and Backlog.pdf" class="text-blue-600 hover:underline">Planning and Sprint Backlog</a></li>
+      <li><a href="assets/deliverables/sprint-3/Full Backlog Snapshot 3.pdf" class="text-blue-600 hover:underline">Project Backlog Snapshot</a></li>
+      <li><a href="assets/deliverables/sprint-3/Sprint 3 Retrospective.pdf" class="text-blue-600 hover:underline">Retrospective</a></li>
+    </ul>
+  </div>
+
+  <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+    <h3 class="text-xl font-semibold mb-2">Documentation</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li><a href="assets/documentation/" class="text-blue-600 hover:underline">User Guide</a></li>
+      <li><a href="assets/documentation/" class="text-blue-600 hover:underline">Deployment Guide</a></li>
+      <li><a href="assets/documentation/development_guide.md" class="text-blue-600 hover:underline">Development Guide</a></li>
+      <li><a href="assets/documentation/" class="text-blue-600 hover:underline">Testing Guide</a></li>
+      <li><a href="assets/documentation/" class="text-blue-600 hover:underline">FAQ</a></li>
+    </ul>
+  </div>
+
 </div>
 </section>
