@@ -46,11 +46,11 @@ title: Deliverables
   <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
     <h3 class="text-xl font-semibold mb-2">Documentation</h3>
     <ul class="list-disc list-inside text-gray-700">
-      <li><a href="assets/documentation/" class="text-blue-600 hover:underline">User Guide</a></li>
+      <li><a href="assets/documentation/feature-documentation.md" class="text-blue-600 hover:underline">User Guide</a></li>
       <li><a href="assets/documentation/CLOUD_DEPLOY.md" class="text-blue-600 hover:underline">Deployment Guide</a></li>
       <li><a href="assets/documentation/development_guide.md" class="text-blue-600 hover:underline">Development Guide</a></li>
-      <li><a href="assets/documentation/" class="text-blue-600 hover:underline">Testing Guide</a></li>
-      <li><a href="assets/documentation/" class="text-blue-600 hover:underline">FAQ</a></li>
+      <li><a href="assets/documentation/TESTING_GUIDE.md" class="text-blue-600 hover:underline">Testing Guide</a></li>
+      <li><a href="assets/documentation/FAQ.md" class="text-blue-600 hover:underline">FAQ</a></li>
     </ul>
   </div>
 
