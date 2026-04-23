@@ -37,6 +37,7 @@ title: Deliverables
     <h3 class="text-xl font-semibold mb-2">Sprint 3 Deliverables</h3>
     <ul class="list-disc list-inside text-gray-700">
       <li><a href="assets/deliverables/sprint-3/Sprint 3 Presentation.pdf" class="text-blue-600 hover:underline">Sprint 3 Presentation</a></li>
+      <li><a href="https://drive.google.com/file/d/1Kwpgm6kB6uMOL52dBJZyT53RDfNE3trn/view?usp=sharing" class="text-blue-600 hover:underline">Sprint 3 Demo Video</a></li>
       <li><a href="assets/deliverables/sprint-3/Sprint 3 Planning and Backlog.pdf" class="text-blue-600 hover:underline">Planning and Sprint Backlog</a></li>
       <li><a href="assets/deliverables/sprint-3/Full Backlog Snapshot 3.pdf" class="text-blue-600 hover:underline">Project Backlog Snapshot</a></li>
       <li><a href="assets/deliverables/sprint-3/Sprint 3 Retrospective.pdf" class="text-blue-600 hover:underline">Retrospective</a></li>
