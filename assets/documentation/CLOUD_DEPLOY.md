@@ -73,7 +73,7 @@ echo "=== Startup done: $(date -Is) ==="
 
 #### B. Provision the VM
 
-Run the following command to create an e2-medium instance (recommended for PostGIS) with the startup script attached:
+Run the following commands to create an e2-medium instance (recommended for PostGIS) with the startup script attached:
 
 ```bash
 gcloud compute instances create carebot-vm \
@@ -86,6 +86,22 @@ gcloud compute instances create carebot-vm \
     --boot-disk-size=50GB \
     --tags=http-server,https-server \
     --metadata-from-file=startup-script=./startup-script-app-server.sh
+
+gcloud compute firewall-rules create allow-http \
+    --project=YOUR_PROJECT_ID \
+    --action=ALLOW \
+    --rules=tcp:80 \
+    --source-ranges=0.0.0.0/0 \
+    --target-tags=http-server \
+    --description="Allow HTTP traffic on port 80"
+
+gcloud compute firewall-rules create allow-https \
+    --project=YOUR_PROJECT_ID \
+    --action=ALLOW \
+    --rules=tcp:443 \
+    --source-ranges=0.0.0.0/0 \
+    --target-tags=https-server \
+    --description="Allow HTTPS traffic on port 443"
 ```
 
 Recommended Specs:
@@ -138,8 +154,8 @@ POSTGRES_* variables configure the database container, while DATABASE_* must mat
 Transfer your application code to the GCP instance:
 
 ```bash
-gcloud compute scp --recurse . carebot-vm:~/carebot/
-gcloud compute scp .env-gcloud carebot-vm:~/carebot/root/
+gcloud compute scp --project=YOUR_PROJECT_ID --recurse . carebot-vm:~/carebot/
+gcloud compute scp --project=YOUR_PROJECT_ID .env-gcloud carebot-vm:~/carebot/root/
 ```
 
 Or use `git clone` if the repository is accessible:
@@ -152,7 +168,7 @@ cd ~/carebot/root
 And copy your .env-gcloud file to the VM:
 
 ```bash
-gcloud compute scp .env-gcloud carebot-vm:~/carebot/root/
+gcloud compute scp --project=YOUR_PROJECT_ID .env-gcloud carebot-vm:~/carebot/root/
 ```
 
 ### 4. Configuration on GCP Instance
@@ -160,7 +176,7 @@ gcloud compute scp .env-gcloud carebot-vm:~/carebot/root/
 SSH into your GCP instance:
 
 ```bash
-gcloud compute ssh carebot-vm
+gcloud compute ssh --project=YOUR_PROJECT_ID carebot-vm
 ```
 
 Navigate to the application directory:
@@ -169,7 +185,25 @@ Navigate to the application directory:
 cd ~/carebot/root
 ```
 
-### 5. Deploy with Docker Compose
+### 5. Setup HTTPS
+
+Secure your application by generating an SSL certificate via Let's Encrypt.
+
+```bash
+# Install certbot if you don't have it
+sudo apt-get install certbot python3-certbot-nginx
+
+# Generate certificate for your domain
+sudo certbot certonly --standalone \
+    -d your.domain.name \
+    --agree-tos \
+    -m your-email@example.com \
+    --non-interactive
+```
+
+The command above is a one-time manual setup. Let's Encrypt certificates expire every 90 days. You will need to re-run the command or manually trigger a renewal before the 90-day window closes.
+
+### 6. Deploy with Docker Compose
 
 Build and start all services using the GCP-specific compose file:
 
@@ -182,28 +216,6 @@ docker compose -f docker-compose.yml -f docker-compose.gcloud.yml up -d
 - Builds the Nginx Docker image (if not already built)
 - Starts all three services (web, nginx, postgis)
 - Runs in detached mode (`-d`)
-
-### 6. Initialize Database
-
-After services are running, you may need to run migrations:
-
-```bash
-docker compose -f docker-compose.yml -f docker-compose.gcloud.yml exec web python manage.py migrate
-```
-
-Create a superuser if not already created:
-
-```bash
-docker compose -f docker-compose.yml -f docker-compose.gcloud.yml exec web python manage.py createsuperuser
-```
-
-### 7. Collect Static Files
-
-Collect static files for Nginx to serve:
-
-```bash
-docker compose -f docker-compose.yml -f docker-compose.gcloud.yml exec web python manage.py collectstatic --noinput
-```
 
 ## Volumes and Persistent Storage
 
@@ -225,16 +237,6 @@ volumes:
 - **Port 5432**: (Internal): PostGIS database - for external access if needed
 
 **Recommendation:** Configure a Google Cloud Firewall rule to only allow HTTP/HTTPS traffic on ports 80/443.
-
-## SSL/HTTPS Configuration
-
-To add HTTPS support:
-
-1. **Option A: Cloud Load Balancer** - Use GCP's Cloud Load Balancer with SSL/TLS termination
-2. **Option B: Nginx SSL** - Configure SSL certificates in the Nginx container
-3. **Option C: Let's Encrypt** - Use Certbot with Docker
-
-Update the Nginx configuration in `app/nginx/` to handle HTTPS redirects.
 
 ## Monitoring and Maintenance
 
